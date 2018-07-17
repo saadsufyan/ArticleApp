@@ -6,9 +6,44 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content>
+<div class="outer-box">
+	<p class="zeroQuotes" *ngIf="errormsg">No Articles found</p>
+	<!-- Product box -->
+	<div class="col-xs-12 promotion-box-outer">
+		<div class="col-xs-12 promotion-box" *ngFor="let x of items">
+			<table class="table table-promotion ltr">
+				<tr>
+          <td>Title name</td>
+          <td>{{x.name}}</td>
+				</tr>
+				<tr>
+          <td>Description</td>
+          <td>{{x.description}}</td>
+				</tr>
+			</table>
+			<div class="col-xs-12 no-p">
+				<div class="product-box ltr">
+					<img src="{{x.image}}"/>
+				</div>
+				<div class="two-btn-box ltr">
+					<button class="btn-nazik black sm1">Edit</button>
+					<button class="btn-nazik sm">Delete</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Product box  -->
+</div>
+
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="col-xs-12 btn-box fixed" style="text-align: center;">
+		<button class="btn-nazik">Add</button>	
+	</div>
+  </ion-toolbar>
+</ion-footer>
