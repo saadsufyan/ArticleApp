@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { AddarticlePage } from '../addarticle/addarticle';
 
 @Component({
   selector: 'page-home',
@@ -37,8 +38,14 @@ export class HomePage {
 
   }
 
-  getData(){
 
+  goToAddArticle(){
+    this.navCtrl.push(AddarticlePage)
+  }
+
+  updateArticle(id){
+    console.log(this.items[id])
+    this.navCtrl.push(AddarticlePage,{data: this.items[id]})
   }
 
 }

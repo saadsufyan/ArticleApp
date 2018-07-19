@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -28,8 +28,8 @@
 					<img src="{{x.image}}"/>
 				</div>
 				<div class="two-btn-box ltr">
-					<button class="btn-nazik black sm1">Edit</button>
-					<button class="btn-nazik sm">Delete</button>
+					<button class="btn-article black sm1" (click)="updateArticle(x.id)">Edit</button>
+					<button class="btn-article sm">Delete</button>
 				</div>
 			</div>
 		</div>
@@ -43,7 +43,7 @@
 <ion-footer>
   <ion-toolbar>
     <div class="col-xs-12 btn-box fixed" style="text-align: center;">
-		<button class="btn-nazik">Add</button>	
+		<button class="btn-article" (click)="goToAddArticle()">Add</button>	
 	</div>
   </ion-toolbar>
 </ion-footer>
